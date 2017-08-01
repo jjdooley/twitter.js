@@ -5,9 +5,10 @@ const nunjucks = require('nunjucks')
 const tweetBot = require("./tweetBank.js")
 const routes = require('./routes');
 const path = require('path');
-
+const bodyParser = require('body-parser');
 
 app.use(volleyball);
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', routes);
 app.use(express.static('public'));
 

@@ -4,7 +4,7 @@ const data = []
 
 
 function add (name, content) {
-  data.push({ name: name, content: content });
+  data.push({ name: name, content: content, id: String(data.length) });
 }
 
 function list () {
@@ -33,7 +33,8 @@ const getFakeTweet = function() {
 };
 
 for (let i = 0; i < 10; i++) {
-  module.exports.add( getFakeName(), getFakeTweet() );
+
+  module.exports.add( getFakeName(), getFakeTweet(), i+1 );
 }
 
-module.exports.add("Sam", "is really cool!! #blesst");
+module.exports.add("Sam", "is really cool!! #blesst", 0);
