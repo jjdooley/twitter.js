@@ -57,3 +57,10 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+#tweetList {
+  list-style: none;
+  background-color: lightblue;
+  border: solid 2px fuchsia; 
+  margin: 5px 0 5px 0;
+}
